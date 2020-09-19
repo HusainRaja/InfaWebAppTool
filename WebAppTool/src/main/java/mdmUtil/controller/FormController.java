@@ -39,7 +39,7 @@ public class FormController {
 		System.out.println();
 
 		if (mdmService.authenticateUser(user)) {
-			return "success";
+			return "index";
 
 		} else {
 			model.addAttribute("status", "Invalid Username/password");
