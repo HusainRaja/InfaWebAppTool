@@ -3,6 +3,7 @@ package mdmUtil.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,15 +21,15 @@ public class FormController {
 	@Autowired
 	MDMConnection mdmConnection;
 
-	@RequestMapping("/login")
+	@RequestMapping("/")
 	public String contactForm() {
 
 		System.out.println("In the login URL");
 		return "login";
 	}
 
-	@RequestMapping(path = "/contactProcess", method = RequestMethod.POST)
-	public String contactProcess(@ModelAttribute User user) {
+	@RequestMapping(path = "/loginProcess", method = RequestMethod.POST)
+	public String contactProcess(@ModelAttribute User user,Model model) {
 
 		System.out.println(user);
 
@@ -41,6 +42,7 @@ public class FormController {
 			return "success";
 
 		} else {
+			model.addAttribute("status", "Invalid Username/password");
 			return "login";
 		}
 

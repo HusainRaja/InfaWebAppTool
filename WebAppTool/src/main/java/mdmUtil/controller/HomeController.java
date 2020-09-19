@@ -30,7 +30,7 @@ public class HomeController {
 	@RequestMapping("/home")
 	public String home(Model model) {
 		System.out.println("In the home URL");
-		model.addAttribute("name", "Husain Akil Raja");
+		model.addAttribute("name", "Husain  Raja");
 
 		return "home";
 	}

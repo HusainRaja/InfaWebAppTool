@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ page isELIgnored="false"%>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -20,12 +22,8 @@
 
 	<div class="container mt-5">
 
-		<form action="contactProcess" method="post">
-			<div class="form-group">
-				<label for="exampleInputEmail1">Email address</label> <input
-					type="email" class="form-control" id="exampleInputEmail1"
-					aria-describedby="emailHelp" placeholder="Enter email" name="email">
-			</div>
+		<form action="loginProcess" method="post">
+			
 
 			<div class="form-group">
 				<label for="User name">User name</label> <input type="text"
@@ -37,6 +35,7 @@
 					class="form-control" id="userPassword" aria-describedby="emailHelp"
 					placeholder="Enter email" name="password">
 			</div>
+			<p style="color:red;">${status }</p>
 			<hr>
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>

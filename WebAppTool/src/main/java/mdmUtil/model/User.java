@@ -1,15 +1,9 @@
 package mdmUtil.model;
 
 public class User {
-	private String userName, email, password;
+	private String userName, password;
 
-	public String getEmail() {
-		return email;
-	}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
 
 	public String getPassword() {
 		return password;
@@ -29,7 +23,9 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [userName=" + userName + ", email=" + email + ", password=" + password + "]";
+		return "User [userName=" + userName + ", password=" + password + "]";
 	}
+
+
 
 }
