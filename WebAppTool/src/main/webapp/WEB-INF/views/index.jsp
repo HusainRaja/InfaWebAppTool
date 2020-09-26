@@ -10,6 +10,8 @@
 <h1>Select the action to be performed !</h1>
 
 <p><a href="home">Bulk CSI edit</a></p>
+<hr>
+<p><a href="logout">logout</a></p>
 
 </body>
 </html>

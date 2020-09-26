@@ -22,7 +22,7 @@
 
 	<div class="container mt-5">
 
-		<form action="loginProcess" method="post">
+		<form action="loginProcess" method="POST">
 			
 
 			<div class="form-group">
