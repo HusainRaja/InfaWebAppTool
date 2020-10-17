@@ -27,14 +27,14 @@ public class FormController {
 	@Autowired
 	MDMConnection mdmConnection;
 
-	@RequestMapping("/")
+	@RequestMapping("/myLogin")
 	public String contactForm() {
 
 		System.out.println("In the login URL");
 		return "login";
 	}
 
-	@RequestMapping(path = "/loginProcess", method = RequestMethod.POST)
+	@RequestMapping(path = "/appLogin", method = RequestMethod.POST)
 	public String contactProcess(@ModelAttribute User user,Model model) {
 
 		System.out.println(user);
@@ -44,7 +44,7 @@ public class FormController {
 		System.out.println("Calling the authenticate call");
 		System.out.println();
 
-		if (mdmService.authenticateUser(user)) {
+		if (mdmService.authenticateUser()) {
 			return "index";
 
 		} else {

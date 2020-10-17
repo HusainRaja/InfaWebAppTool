@@ -22,13 +22,13 @@
 
 	<div class="container mt-5">
 
-		<form action="loginProcess" method="POST">
+		<form action="appLogin" method="POST">
 			
 
 			<div class="form-group">
 				<label for="User name">User name</label> <input type="text"
 					class="form-control" id="userName" aria-describedby="emailHelp"
-					placeholder="Enter name" name="userName">
+					placeholder="Enter name" name="username">
 			</div>
 			<div class="form-group">
 				<label for="userPassword">Password</label> <input type="password"
@@ -37,6 +37,7 @@
 			</div>
 			<p style="color:red;">${status }</p>
 			<hr>
+			<input name="_csrf" type="hidden" value="6553752c-7997-4915-a508-df03a10f0786" />
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 
