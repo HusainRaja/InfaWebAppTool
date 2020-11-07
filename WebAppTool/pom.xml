@@ -76,7 +76,11 @@
 		</dependency>
 
 
-
+		<dependency>
+			<groupId>infa-lib</groupId>
+			<artifactId>siperian-server-pkiutil</artifactId>
+			<version>1.0</version>
+		</dependency>
 
 
 

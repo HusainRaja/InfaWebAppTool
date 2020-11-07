@@ -41,7 +41,7 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/myLogin").permitAll().loginProcessingUrl("/appLogin").defaultSuccessUrl("/home").and().csrf().disable();
+		http.authorizeRequests().anyRequest().authenticated().and().httpBasic().and().formLogin().loginPage("/myLogin").permitAll().loginProcessingUrl("/appLogin").defaultSuccessUrl("/home").and().csrf().disable();
 	}
 	
 	

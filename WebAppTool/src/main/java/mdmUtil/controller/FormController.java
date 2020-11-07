@@ -34,27 +34,25 @@ public class FormController {
 		return "login";
 	}
 
-	@RequestMapping(path = "/appLogin", method = RequestMethod.POST)
-	public String contactProcess(@ModelAttribute User user,Model model) {
-
-		System.out.println(user);
-
-		System.out.println(mdmConnection);
-
-		System.out.println("Calling the authenticate call");
-		System.out.println();
-
-		if (mdmService.authenticateUser()) {
-			return "index";
-
-		} else {
-			model.addAttribute("status", "Invalid Username/password");
-			return "login";
-		}
-		
-		
-
-	}
+	/*
+	 * @RequestMapping(path = "/appLogin", method = RequestMethod.POST) public
+	 * String contactProcess(@ModelAttribute User user,Model model) {
+	 * 
+	 * System.out.println(user);
+	 * 
+	 * System.out.println(mdmConnection);
+	 * 
+	 * System.out.println("Calling the authenticate call"); System.out.println();
+	 * 
+	 * if (mdmService.authenticateUser()) { return "index";
+	 * 
+	 * } else { model.addAttribute("status", "Invalid Username/password"); return
+	 * "login"; }
+	 * 
+	 * 
+	 * 
+	 * }
+	 */
 	
     @RequestMapping(value="/logout", method=RequestMethod.GET)  
     public String logoutPage(HttpServletRequest request, HttpServletResponse response) {  
