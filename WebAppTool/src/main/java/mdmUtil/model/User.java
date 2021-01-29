@@ -1,9 +1,17 @@
 package mdmUtil.model;
 
 public class User {
-	private String userName, password;
+	private String userName, password,orsid;
 
 
+
+	public String getOrsid() {
+		return orsid;
+	}
+
+	public void setOrsid(String orsid) {
+		this.orsid = orsid;
+	}
 
 	public String getPassword() {
 		return password;
@@ -23,8 +31,10 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [userName=" + userName + ", password=" + password + "]";
+		return "User [userName=" + userName + ", password=" + password + ", orsid=" + orsid + "]";
 	}
+
+	
 
 
 
